@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SmartKeyboard2.model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,15 +11,9 @@ namespace SmartKeyboard2.laptop
     {
 
         /// <summary>
-        /// 做成单例模式
-        /// </summary>
-        /// <returns></returns>
-        IClient GetInstance();
-
-        /// <summary>
         /// 向键盘界面发送键盘的布局
         /// </summary>
-       void SendView(object view);
+       void SendView(IView view);
 
         /// <summary>
         /// 键盘切换到相应的布局
@@ -26,13 +21,23 @@ namespace SmartKeyboard2.laptop
         /// <param name="ViewID"></param>
        void SwitchView(object ViewID);
 
+
+        void RenderIOBar(String VIewID);
+
+        void RenderTaskBar(String VIewID);
+
+
         /// <summary>
         /// 键盘按键被点击时触发
         /// </summary>
-         EventHandler KeyPress { get; set; }
+        EventHandler KeyPress { get; set; }
 
-         object GetCurentViewID();
+        string GetCurentViewID();
 
+        /// <summary>
+        /// 接口初始化函数
+        /// </summary>
+        void Initlize();
 
     }
 }

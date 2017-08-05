@@ -12,8 +12,20 @@ namespace SmartKeyboard2.model
     /// </summary>
     class ViewManager
     {
+        private static  ViewManager _view;
+
+        public static ViewManager GetInstance()
+        {
+            if (_view == null)
+                _view = new ViewManager();
+            return _view;
+        }
 
 
+        public List<IView> GetAllViews()
+        {
+            return new List<IView>();
+        }
 
     }
 }

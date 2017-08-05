@@ -1,18 +1,18 @@
-﻿using System;
+﻿using SmartKeyboard2.laptop;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SmartKeyboard2.model;
 
 namespace SmartKeyboard2
 {
-    class SysKeyBoard2:UserControl
+    public  class SysKeyBoard2:UserControl,IClient
     {
         private Panel taskPanel;
         private Panel IOPanel;
-
-
 
         #region
         private float width = 18.5F;
@@ -20,10 +20,76 @@ namespace SmartKeyboard2
         private float widthDPI;
         private float heightDPI;
 
+        EventHandler IClient.KeyPress
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        #endregion
+
+        private string currentViewID = string.Empty;
+
+        Dictionary<string, IView> dicFunView = new Dictionary<string, IView>();
+        Dictionary<string, IView> dicIOView = new Dictionary<string, IView>();
+
+
+        #region
+        public void SendView(IView view)
+        {
+            if (view.type == ViewType.FunctionBar)
+            {
+                dicFunView.Add(view.GetApplicationName(), view);
+            }
+            else
+            {
+                dicIOView.Add(view.GetApplicationName(), view);
+            }
+        }
+        void IClient.Initlize()
+        {
+
+        }
+
+
+        public void RenderIOBar(string id)
+        {
+            if (dicIOView.ContainsKey(id))
+            {
+                currentViewID = id;
+                RenderIOBar(dicIOView[id].GetKeysUnit());
+            }
+        }
+
+        public void RenderTaskBar(string id)
+        {
+            if (dicFunView.ContainsKey(id))
+            {
+                RenderTaskBar(dicFunView[id].GetKeysUnit());
+            }
+        }
+
+        public void SwitchView(object ViewID)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string GetCurentViewID()
+        {
+            return currentViewID;
+        }
+
         #endregion
 
 
-        public  SysKeyBoard2()
+        public SysKeyBoard2()
         {
             InitializeComponent();
             widthDPI = this.Width;
@@ -90,5 +156,7 @@ namespace SmartKeyboard2
             this.ResumeLayout(false);
 
         }
+
+      
     }
 }

@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using SmartKeyboard2.StandKeyBoard;
+using SmartKeyboard2.laptop;
+using SmartKeyboard2.model;
+
 namespace SmartKeyboard2
 {
-    public class SysKeyBoard : UserControl
+    public class SysKeyBoard : UserControl,IClient
     {
         private Panel funPanel;
         private Panel IOPanel;
@@ -14,13 +17,31 @@ namespace SmartKeyboard2
         private StandFunBar funBar;
 
 
-#region
+        private string currentViewID = string.Empty;
+
+        Dictionary<string, IView> dicFunView = new Dictionary<string, IView>();
+        Dictionary<string, IView> dicIOView = new Dictionary<string, IView>();
+
+        #region
         private float width = 18.5F;
         private float height = 7.0F;
         private float widthDPI;
         private float heightDPI;
 
-#endregion
+        EventHandler IClient.KeyPress
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        #endregion
 
         public SysKeyBoard()
         {
@@ -115,6 +136,55 @@ namespace SmartKeyboard2
 
         }
 
-     
+        #region
+        public void SendView(IView view)
+        {
+            if (view.type == ViewType.FunctionBar)
+            {
+                dicFunView.Add(view.GetApplicationName(), view);
+            }
+            else
+            {
+                dicIOView.Add(view.GetApplicationName(), view);
+            }
+        }
+        void IClient.Initlize()
+        {
+
+
+
+        }
+
+
+        public void RenderIOBar(string id)
+        {
+            if (dicIOView.ContainsKey(id))
+            {
+                currentViewID = id;
+                RenderIOBar(dicIOView[id].GetKeysUnit());
+            }
+        }
+
+        public void RenderTaskBar(string id)
+        {
+            if (dicFunView.ContainsKey(id))
+            {
+                RenderTaskBar(dicFunView[id].GetKeysUnit());
+            }
+        }
+
+        public void SwitchView(object ViewID)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string GetCurentViewID()
+        {
+            return currentViewID;
+        }
+
+        #endregion
+
+
     }
 }
