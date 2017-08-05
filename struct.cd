@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SmartKeyboard2.SysKeyBoard">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAASIAAAAAACAEIAAAAAAAA=</HashCode>
+      <FileName>SysKeyBoard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmartKeyboard2.KeyUnit">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAIAAAAQAAAAAA=</HashCode>
+      <FileName>KeyUnit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmartKeyboard2.SKey">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SKey.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>

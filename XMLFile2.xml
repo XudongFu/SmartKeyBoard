@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<keyBoard application="对应的程序名称">
+  <setting>
+    <defaultView>
+    </defaultView>
+    <!--还有关于默认键盘是否显示切换视图按钮-->
+  </setting>
+  
+  <view id="">
+    
+    
+    <key  type="" changeView="true" >
+      <rec>按键的位置和区域</rec>
+      <name>按键显示的名称，在所在的视图内必须唯一</name>
+      <value>针对于不同的type，拥有不同的值，处理方法也不同</value>
+      <action>
+        <jump>
+          <desitnationView></desitnationView>
+        </jump>
+      </action>
+    </key>
+  </view>
+  
+  <view id="">
+    
+  </view>
+
+  <addition attach="视图的名称">
+    <keyAction name="要附加到的键的名称">
+      <jump>
+        <desitnationView></desitnationView>
+      </jump>
+    </keyAction>
+  </addition>
+</keyBoard>

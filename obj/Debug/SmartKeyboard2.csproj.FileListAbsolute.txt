@@ -1,0 +1,12 @@
+C:\个人文件\githubProjections\SmartKeyBoard\SmartKeyboard2\bin\Debug\SmartKeyboard2.exe.config
+C:\个人文件\githubProjections\SmartKeyBoard\SmartKeyboard2\bin\Debug\SmartKeyboard2.exe
+C:\个人文件\githubProjections\SmartKeyBoard\SmartKeyboard2\bin\Debug\SmartKeyboard2.pdb
+C:\个人文件\githubProjections\SmartKeyBoard\SmartKeyboard2\obj\Debug\SmartKeyboard2.Form1.resources
+C:\个人文件\githubProjections\SmartKeyBoard\SmartKeyboard2\obj\Debug\SmartKeyboard2.KeyUnit.resources
+C:\个人文件\githubProjections\SmartKeyBoard\SmartKeyboard2\obj\Debug\SmartKeyboard2.Properties.Resources.resources
+C:\个人文件\githubProjections\SmartKeyBoard\SmartKeyboard2\obj\Debug\SmartKeyboard2.SysKeyBoard.resources
+C:\个人文件\githubProjections\SmartKeyBoard\SmartKeyboard2\obj\Debug\SmartKeyboard2.csproj.GenerateResource.Cache
+C:\个人文件\githubProjections\SmartKeyBoard\SmartKeyboard2\obj\Debug\SmartKeyboard2.exe
+C:\个人文件\githubProjections\SmartKeyBoard\SmartKeyboard2\obj\Debug\SmartKeyboard2.pdb
+C:\个人文件\githubProjections\SmartKeyBoard\SmartKeyboard2\obj\Debug\SmartKeyboard2.csprojResolveAssemblyReference.cache
+C:\个人文件\githubProjections\SmartKeyBoard\SmartKeyboard2\obj\Debug\SmartKeyboard2.SysKeyBoard2.resources
